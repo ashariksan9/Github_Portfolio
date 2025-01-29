@@ -506,59 +506,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Education ----- */
-/* --------------------------------------- */
-
-.education__list {
-    display: flex;
-    flex-direction: column; /* Mengatur tata letak menjadi vertikal */
-    gap: var(--gutter-medium); /* Memberikan jarak antara setiap item pendidikan */
-}
-
-.education__item {
-    background-color: var(--color-background-light); /* Warna latar belakang untuk setiap item */
-    padding: var(--gutter-normal); /* Padding untuk ruang di dalam item */
-    border-radius: 8px; /* Sudut melengkung untuk item */
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Bayangan untuk efek kedalaman (diubah ke putih untuk kontras) */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
-}
-
-.education__item:hover {
-    transform: translateY(-5px); /* Efek naik sedikit saat hover */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15); /* Bayangan lebih tebal saat hover */
-}
-
-.education__item h3 {
-    font-size: 2rem; /* Ukuran font lebih besar untuk nama institusi */
-    margin-bottom: var(--gutter-small); /* Jarak bawah untuk nama institusi */
-    color: var(--color-primary); /* Warna teks untuk nama institusi */
-    font-weight: bold; /* Tebalkan font untuk judul */
-}
-
-.education__item ul {
-    list-style-type: disc; /* Menambahkan bullet points */
-    padding-left: 20px; /* Jarak untuk bullet points */
-    margin-bottom: var(--gutter-small); /* Jarak bawah untuk list */
-}
-
-.education__item ul li {
-    font-size: 1.25rem; /* Ukuran font lebih besar untuk deskripsi */
-    color: var(--color-text); /* Warna teks untuk deskripsi */
-    line-height: 1.6; /* Jarak antar baris lebih longgar */
-}
-
-/* Responsive Design */
-@media (max-width: 1240px) {
-    .education__list {
-        padding: var(--gutter-normal); /* Padding untuk ruang di sekeliling daftar */
-    }
-
-    .education__item {
-        width: 100%; /* Lebar penuh pada layar kecil */
-    }
-}
-
-/* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
 
