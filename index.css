@@ -506,28 +506,48 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Clients ----- */
+/* ----- Education ----- */
 /* --------------------------------------- */
 
-.client__logos {
+.education__list {
     display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    flex-direction: column; /* Mengatur tata letak menjadi vertikal */
+    gap: var(--gutter-medium); /* Memberikan jarak antara setiap item pendidikan */
 }
 
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
+.education__item {
+    background-color: var(--color-background-light); /* Warna latar belakang untuk setiap item */
+    padding: var(--gutter-normal); /* Padding untuk ruang di dalam item */
+    border-radius: 8px; /* Sudut melengkung untuk item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
 }
 
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
+.education__item:hover {
+    transform: translateY(-5px); /* Efek naik sedikit saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan lebih tebal saat hover */
+}
+
+.education__item h3 {
+    font-size: 1.5rem; /* Ukuran font untuk nama institusi */
+    margin-bottom: var(--gutter-small); /* Jarak bawah untuk nama institusi */
+    color: var(--color-primary); /* Warna teks untuk nama institusi */
+}
+
+.education__item p {
+    font-size: 1rem; /* Ukuran font untuk deskripsi */
+    color: var(--color-text); /* Warna teks untuk deskripsi */
+    margin-bottom: var(--gutter-small); /* Jarak bawah untuk setiap paragraf */
+}
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+    .education__list {
+        padding: var(--gutter-normal); /* Padding untuk ruang di sekeliling daftar */
     }
 
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
+    .education__item {
+        width: 100%; /* Lebar penuh pada layar kecil */
     }
 }
 
